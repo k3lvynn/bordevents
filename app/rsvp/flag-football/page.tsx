@@ -3,25 +3,32 @@ export default function FlagFootballRSVPPage() {
   return (
     <main
       style={{
-        minHeight: '100vh',
-        backgroundColor: '#000909',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-        padding: '0 16px',
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        padding: "0 1.5rem",
       }}
     >
-      <h1 style={{ fontSize: 32, marginBottom: 12 }}>
-        Flag Football RSVP ✅
-      </h1>
-      <p style={{ fontSize: 18, marginBottom: 8 }}>
-        Route: /rsvp/flag-football
-      </p>
-      <p style={{ opacity: 0.8 }}>
-        This is the production RSVP page hosted on Vercel.
-      </p>
+      <div>
+        <h1
+          style={{
+            fontSize: "3rem",
+            marginBottom: "1rem",
+          }}
+        >
+          Flag Football RSVP ✅
+        </h1>
+        <p
+          style={{
+            fontSize: "1.25rem",
+            color: "#9ca3af",
+          }}
+        >
+          This page is live at <code>/rsvp/flag-football</code>.
+        </p>
+      </div>
     </main>
   );
 }

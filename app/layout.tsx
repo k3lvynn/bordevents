@@ -1,17 +1,13 @@
 // app/layout.tsx
-import './globals.css';
-import type { Metadata } from 'next';
+import "./globals.css";
+import type { ReactNode } from "react";
 
-export const metadata: Metadata = {
-  title: 'Bord Events',
-  description: 'RSVPs and events for Bord.',
+export const metadata = {
+  title: "Bord Events",
+  description: "Bord Events – Flag Football RSVP",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>{children}</body>

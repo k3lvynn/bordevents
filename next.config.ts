@@ -1,8 +1,8 @@
+// next.config.ts
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  // no experimental.appDir needed – App Router is default in Next 13+
 };
 
 export default nextConfig;
