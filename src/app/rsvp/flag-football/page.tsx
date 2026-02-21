@@ -1,12 +1,5 @@
 // src/app/rsvp/flag-football/page.tsx
-"use client";
 
-import type { CSSProperties } from "react";
-
-export default function FlagFootballRSVPPage() {
-  // ...rest of your component...
-}
-import type { CSSProperties } from "react";
 export default function FlagFootballRSVPPage() {
   return (
     <main
@@ -33,24 +26,19 @@ export default function FlagFootballRSVPPage() {
             marginBottom: 24,
           }}
         >
-          <button
-            type="button"
-            onClick={() => {
-              if (typeof window !== "undefined") window.history.back();
-            }}
+          <a
+            href="/"
             style={{
-              border: "none",
-              background: "none",
+              display: "inline-block",
               color: "#a8a29e",
               fontSize: 13,
               fontWeight: 600,
-              cursor: "pointer",
-              padding: 0,
+              textDecoration: "none",
               marginBottom: 8,
             }}
           >
             ← Back to Events
-          </button>
+          </a>
           <div
             style={{
               fontSize: 26,
@@ -111,12 +99,12 @@ export default function FlagFootballRSVPPage() {
             >
               📍 Balboa Park, Field 3 · San Diego
               <br />
-              📅 Sunday · 10:00 AM (arrive 9:45)
+              📅 Sunday · 10:00 AM (arrive 9:45 AM)
             </div>
           </div>
         </section>
 
-        {/* Simple RSVP form – this is just a visual form for now */}
+        {/* “Fake” RSVP form – just static markup for now */}
         <section
           style={{
             background: "rgba(255,255,255,0.02)",
@@ -143,15 +131,24 @@ export default function FlagFootballRSVPPage() {
             }}
           >
             Drop your info below to reserve a spot for this week&apos;s pickup
-            game. You&apos;ll get a confirmation email from the host once
-            you&apos;re locked in.
+            game. You&apos;ll get a confirmation from the host once
+            you&apos;re locked in. (For the pilot, submissions will be handled
+            manually.)
           </p>
 
           <form
-            onSubmit={(e) => e.preventDefault()}
-            style={{ display: "flex", flexDirection: "column", gap: 12 }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 12,
+            }}
           >
-            <div style={{ display: "flex", gap: 12 }}>
+            <div
+              style={{
+                display: "flex",
+                gap: 12,
+              }}
+            >
               <div style={{ flex: 1 }}>
                 <label
                   style={{
@@ -169,7 +166,6 @@ export default function FlagFootballRSVPPage() {
                   type="text"
                   placeholder="Jordan"
                   style={inputStyle}
-                  required
                 />
               </div>
               <div style={{ flex: 1 }}>
@@ -189,7 +185,6 @@ export default function FlagFootballRSVPPage() {
                   type="text"
                   placeholder="Williams"
                   style={inputStyle}
-                  required
                 />
               </div>
             </div>
@@ -211,7 +206,6 @@ export default function FlagFootballRSVPPage() {
                 type="email"
                 placeholder="you@example.com"
                 style={inputStyle}
-                required
               />
             </div>
 
@@ -236,13 +230,13 @@ export default function FlagFootballRSVPPage() {
             </div>
 
             <button
-              type="submit"
+              type="button"
               style={{
                 marginTop: 8,
                 padding: "14px 16px",
                 borderRadius: 8,
                 border: "none",
-                cursor: "pointer",
+                cursor: "default",
                 fontSize: 18,
                 letterSpacing: 2,
                 textTransform: "uppercase",
@@ -261,9 +255,8 @@ export default function FlagFootballRSVPPage() {
                 marginTop: 8,
               }}
             >
-              This is a demo RSVP page just for the Liberty Station pickup
-              proof-of-concept. Payments and confirmations can be handled
-              manually with the host for now.
+              For this early pilot, the host will confirm RSVPs and handle any
+              payments offline. Bord is providing the event hub and guest list.
             </p>
           </form>
         </section>
@@ -272,7 +265,7 @@ export default function FlagFootballRSVPPage() {
   );
 }
 
-const inputStyle: CSSProperties = {
+const inputStyle = {
   width: "100%",
   borderRadius: 7,
   border: "1px solid rgba(255,255,255,0.18)",
@@ -280,4 +273,4 @@ const inputStyle: CSSProperties = {
   padding: "10px 12px",
   color: "#ffffff",
   fontSize: 14,
-};
+} as const;
