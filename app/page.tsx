@@ -1,30 +1,38 @@
-export default function FlagFootballRSVPPage() {
+// app/page.tsx
+import Link from 'next/link';
+
+export default function HomePage() {
   return (
     <main
       style={{
         minHeight: '100vh',
         backgroundColor: '#000909',
-        color: '#ffffff',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
         justifyContent: 'center',
+        alignItems: 'center',
         textAlign: 'center',
-        padding: '2rem',
-        fontFamily:
-          'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+        padding: '0 16px',
       }}
     >
-      <h1 style={{ fontSize: 40, marginBottom: 16 }}>
-        Flag Football RSVP Page ✅
+      <h1 style={{ fontSize: 36, marginBottom: 16 }}>
+        Bord Events
       </h1>
-      <p style={{ fontSize: 20, marginBottom: 8 }}>
-        Route: <code>/rsvp/flag-football</code>
+      <p style={{ fontSize: 20, marginBottom: 32 }}>
+        Welcome! Use this link to RSVP for the next event.
       </p>
-      <p style={{ opacity: 0.8, maxWidth: 600 }}>
-        This is your dedicated RSVP page for the flag football event. You can
-        later replace this text with a real form for players to sign up.
-      </p>
+      <Link
+        href="/rsvp/flag-football"
+        style={{
+          fontSize: 18,
+          padding: '12px 24px',
+          borderRadius: 999,
+          border: '1px solid #ffffff',
+          textDecoration: 'none',
+        }}
+      >
+        RSVP: Flag Football
+      </Link>
     </main>
   );
 }
