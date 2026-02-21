@@ -1,5 +1,5 @@
 // src/app/rsvp/flag-football/page.tsx
-
+import type { CSSProperties } from "react";
 export default function FlagFootballRSVPPage() {
   return (
     <main
@@ -265,7 +265,7 @@ export default function FlagFootballRSVPPage() {
   );
 }
 
-const inputStyle: React.CSSProperties = {
+const inputStyle: CSSProperties = {
   width: "100%",
   borderRadius: 7,
   border: "1px solid rgba(255,255,255,0.18)",
