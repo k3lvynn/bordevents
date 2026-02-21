@@ -1,4 +1,11 @@
 // src/app/rsvp/flag-football/page.tsx
+"use client";
+
+import type { CSSProperties } from "react";
+
+export default function FlagFootballRSVPPage() {
+  // ...rest of your component...
+}
 import type { CSSProperties } from "react";
 export default function FlagFootballRSVPPage() {
   return (
