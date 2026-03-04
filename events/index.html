@@ -195,7 +195,7 @@ body::before {
   <script>
     // Extract the slug from the path: /events/some-slug-here
     const slug = window.location.pathname.replace(/^\/events\//, '').replace(/\/$/, '');
-    const deepLink = `bord://events/${slug}`;
+    const deepLink = `bord://event/${slug}`;
 
     // Set the open-in-app button
     document.getElementById('btn-open-app').href = deepLink;
